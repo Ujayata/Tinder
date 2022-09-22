@@ -14,9 +14,9 @@ contract tinder {
     }
     
     function adduser (string memory _fullname, string memory _imageurl) public {
-        require(giftaddress [msg.sender]= false,'already created an account');
+        require(giftaddress [msg.sender] == false,'already created an account');
         users.push(user(_fullname, _imageurl, (msg.sender), 0, 0));
-        giftaddress[msg.sender]= true;
+        giftaddress[msg.sender] = true;
 
     }
 
